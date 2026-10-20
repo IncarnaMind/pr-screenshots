@@ -1,0 +1,14 @@
+- textbox "Mind content":
+  - list:
+    - listitem:
+      - checkbox "核查清单项已完成"
+      - text: 核查清单项已完成
+      - paragraph: 核查清单项已完成
+    - listitem:
+      - checkbox "Submit report"
+      - text: Submit report
+      - paragraph: Submit report
+    - listitem:
+      - checkbox "Empty checklist item"
+      - text: Empty checklist item
+      - paragraph

@@ -1,0 +1,5 @@
+Native macOS accessibility excerpt from the isolated packaged main app, aa952d1b9627594181424ebeb91925bfca76667c.
+Source: 10-editor-origin.txt, referenced in issue #1468. No VoiceOver speech session was run.
+
+232 Tick box Description: Task item checkbox for 核查清单项, Value: 1
+235 Tick box Description: Task item checkbox for 交付报告, Value: 0

@@ -1,8 +1,8 @@
 {
   "run": {
-    "startedAt": "2026-10-28T00:32:09.441Z",
-    "seconds": 105.783,
-    "commit": "b2fb95db1",
+    "startedAt": "2026-10-28T00:58:46.337Z",
+    "seconds": 69.417,
+    "commit": "5862dad34",
     "model": "anthropic/claude-haiku-5-5",
     "pipeline": "the app's public core checkClaim, with record-cite resolution and judgement"
   },
@@ -12,11 +12,11 @@
     "cites": 10
   },
   "usage": {
-    "requests": 19,
-    "inputTokens": 155711,
-    "outputTokens": 2911,
-    "requestSeconds": 29.904286168,
-    "spentUsd": 0.012787435
+    "requests": 20,
+    "inputTokens": 158690,
+    "outputTokens": 3146,
+    "requestSeconds": 28.72095124999999,
+    "spentUsd": 0.009558185
   },
   "results": [
     {
@@ -46,8 +46,8 @@
       "result": {
         "verdict": "supported",
         "evidence": {
-          "passageId": "f8553167-20f0-4740-8cae-aef7a3eb40d2",
-          "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+          "passageId": "90739668-6a82-4303-a97f-1eef6e792c03",
+          "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
           "documentName": "ECF No. 41",
           "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
           "pageFrom": 3,
@@ -61,14 +61,14 @@
           "check": "found",
           "checkReason": null
         },
-        "says": "The Order states that \"Trial briefs are due by September 2, 2021\", and the sentence's date and page cite match (the order is at page 3).",
+        "says": "The Document orders that trial briefs are due by September 2, 2021.",
         "unsupported": null,
         "calculation": null,
         "citedCaseUnchecked": false,
         "citedCaseFound": false,
         "versions": [
           {
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291"
           }
         ],
@@ -79,7 +79,7 @@
             "from": 43,
             "to": 58,
             "outcome": "supported",
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "documentName": "ECF No. 41",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
             "location": {
@@ -106,18 +106,18 @@
           "reply": "I'll search the Documents for the trial brief deadline.",
           "asked": [
             "trial briefs due September 2, 2021",
-            "trial brief deadline ECF No. 41"
+            "ECF No. 41 trial brief deadline"
           ],
           "searchAgain": false,
           "inputTokens": 5002,
-          "outputTokens": 137,
-          "ms": 1240.184583000002
+          "outputTokens": 138,
+          "ms": 1054.599583000003
         },
         {
           "kind": "check",
           "queries": [
             "trial briefs due September 2, 2021",
-            "trial brief deadline ECF No. 41"
+            "ECF No. 41 trial brief deadline"
           ],
           "handed": [
             {
@@ -153,12 +153,59 @@
               "text": "\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\nDATED this 14th day of January 2021.\nAJohn C. Coughenour\nUNITED STATES DISTRICT JUDGE\n"
             }
           ],
-          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\nThe Order states that \"Trial briefs are due by September 2, 2021\" [^1], and the sentence's date and page cite match (the order is at page 3).\n\nCovered: the trial brief deadline of September 2, 2021",
+          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\nThe Document orders that \"Trial briefs are due by September 2, 2021,\" on page 3 of the order.\n\nCovered: trial brief deadline\nNot covered: none",
           "asked": [],
           "searchAgain": false,
-          "inputTokens": 11075,
-          "outputTokens": 196,
-          "ms": 1552.6917919999978
+          "inputTokens": 11076,
+          "outputTokens": 179,
+          "ms": 1233.6579579999998
+        },
+        {
+          "kind": "check",
+          "queries": [
+            "trial briefs due September 2, 2021",
+            "ECF No. 41 trial brief deadline"
+          ],
+          "handed": [
+            {
+              "document": "ECF No. 41",
+              "text": "\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nTHE HONORABLE JOHN C. COUGHENOUR\nUNITED STATES DISTRICT COURT\nWESTERN DISTRICT OF WASHINGTON\nAT SEATTLE\nREGENCY APARTMENTS VANCOUVER\nLLC,\nPlaintiff,\nv.\nTHE SHERWIN-WILLIAMS COMPANY,\nDefendant.\nCASE NO. C20-5026-JCC\nORDER\nThis matter comes before the Court on Defendant The Sherwin-Williams Company and\nThird-Party Defendant Columbia Construction Service, Inc.’s motion to continue trial (Dkt. No.\n40). Having thoroughly considered the parties’ briefing and the relevant record, the Court finds\noral argument unnecessary and hereby GRANTS in part and DENIES in part the motion for the\nreasons explained herein.\nPlaintiff filed the complaint in this matter on January 13, 2020. (Dkt. No. 1.) On April 27,\n2020, Judge Leighton issued a scheduling order, which set trial for June 1, 2021, the dispositive\nmotions deadline for March 3, 2021, and the discovery deadline for February 1, 2021. (Dkt. No.\n14.) On May 5, 2020, Defendant The Sherwin-Williams Company filed a third-party complaint\nagainst third-party defendant Columbia Construction Service, Inc. (Dkt. No. 17.)\nSix months later, the parties filed a stipulated motion requesting that the Court extend the\n\n[p. 2] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nexpert disclosure deadlines and the discovery deadline by two months. (See Dkt. No. 34 at 1.)\nThe Court granted the parties’ stipulated motion but observed that the parties had not requested\nto extend the dispositive motions deadline, which would be before the parties’ new discovery\ndeadline. (See Dkt. No. 35.) Consistent with the Court’s Chambers Procedures, the Court warned\nthe parties that the Court would be inclined to move the trial date if the parties intended to move\nto extend the dispositive motions deadline. (See id.); see also Chambers Procedures,\n"
+            },
+            {
+              "document": "ECF No. 41",
+              "text": "\nSix months later, the parties filed a stipulated motion requesting that the Court extend the\n\n[p. 2] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nexpert disclosure deadlines and the discovery deadline by two months. (See Dkt. No. 34 at 1.)\nThe Court granted the parties’ stipulated motion but observed that the parties had not requested\nto extend the dispositive motions deadline, which would be before the parties’ new discovery\ndeadline. (See Dkt. No. 35.) Consistent with the Court’s Chambers Procedures, the Court warned\nthe parties that the Court would be inclined to move the trial date if the parties intended to move\nto extend the dispositive motions deadline. (See id.); see also Chambers Procedures,\nhttps://www.wawd.uscourts.gov/judges/coughenour-procedures (“Judge Coughenour will not\ndecrease the amount of time between the dispositive motion cutoff date and the trial date [below\n90 days] unless the parties set forth an extraordinary basis for doing so.”). Accordingly, the\nCourt directed the parties to file a joint status report setting forth the parties’ positions on\nwhether the Court should extend the dispositive motions deadline and, if so, what trial date\nwould be appropriate. (See Dkt. No. 35 at 2.)\nThe parties agree that the Court should extend the dispositive motions deadline but\ndisagree on when it should be and whether the Court should continue the trial. Plaintiff proposes\nthat the Court ignore its 90-day practice, extend the dispositive motions deadline to April 16,\n2021, and hold the trial as scheduled on June 1, 2021. (See Dkt. No. 40 at 3–4.) Defendants\nrequest that the Court continue the trial until November 15, 2021 because Columbia Roofing was\nnot added as a third-party defendant until May 2020, the parties need additional time to complete\ndiscovery in light of the impact of the COVID-19 pandemic, and most roofing occurs between\n"
+            },
+            {
+              "document": "ECF No. 41",
+              "text": "\nwould be appropriate. (See Dkt. No. 35 at 2.)\nThe parties agree that the Court should extend the dispositive motions deadline but\ndisagree on when it should be and whether the Court should continue the trial. Plaintiff proposes\nthat the Court ignore its 90-day practice, extend the dispositive motions deadline to April 16,\n2021, and hold the trial as scheduled on June 1, 2021. (See Dkt. No. 40 at 3–4.) Defendants\nrequest that the Court continue the trial until November 15, 2021 because Columbia Roofing was\nnot added as a third-party defendant until May 2020, the parties need additional time to complete\ndiscovery in light of the impact of the COVID-19 pandemic, and most roofing occurs between\nApril and October so holding the trial over the summer would “interfere with Columbia\nRoofing’s business.” (Dkt. No. 40 at 2.)\nHaving reviewed the parties’ briefing and the relevant record and finding good cause\nbased on the parties’ need to conduct additional discovery and the impact of the COVID-19\npandemic,1 the Court ORDERS as follows:\n1 The Court does not find good cause based on Columbia Roofing’s business interests.\n\n[p. 3] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\n"
+            },
+            {
+              "document": "ECF No. 41",
+              "text": "\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\nDATED this 14th day of January 2021.\nAJohn C. Coughenour\nUNITED STATES DISTRICT JUDGE\n"
+            },
+            {
+              "document": "ECF No. 41",
+              "text": "\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nTHE HONORABLE JOHN C. COUGHENOUR\nUNITED STATES DISTRICT COURT\nWESTERN DISTRICT OF WASHINGTON\nAT SEATTLE\nREGENCY APARTMENTS VANCOUVER\nLLC,\nPlaintiff,\nv.\nTHE SHERWIN-WILLIAMS COMPANY,\nDefendant.\nCASE NO. C20-5026-JCC\nORDER\nThis matter comes before the Court on Defendant The Sherwin-Williams Company and\nThird-Party Defendant Columbia Construction Service, Inc.’s motion to continue trial (Dkt. No.\n40). Having thoroughly considered the parties’ briefing and the relevant record, the Court finds\noral argument unnecessary and hereby GRANTS in part and DENIES in part the motion for the\nreasons explained herein.\nPlaintiff filed the complaint in this matter on January 13, 2020. (Dkt. No. 1.) On April 27,\n2020, Judge Leighton issued a scheduling order, which set trial for June 1, 2021, the dispositive\nmotions deadline for March 3, 2021, and the discovery deadline for February 1, 2021. (Dkt. No.\n14.) On May 5, 2020, Defendant The Sherwin-Williams Company filed a third-party complaint\nagainst third-party defendant Columbia Construction Service, Inc. (Dkt. No. 17.)\nSix months later, the parties filed a stipulated motion requesting that the Court extend the\n\n[p. 2] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nexpert disclosure deadlines and the discovery deadline by two months. (See Dkt. No. 34 at 1.)\nThe Court granted the parties’ stipulated motion but observed that the parties had not requested\nto extend the dispositive motions deadline, which would be before the parties’ new discovery\ndeadline. (See Dkt. No. 35.) Consistent with the Court’s Chambers Procedures, the Court warned\nthe parties that the Court would be inclined to move the trial date if the parties intended to move\nto extend the dispositive motions deadline. (See id.); see also Chambers Procedures,\n"
+            },
+            {
+              "document": "ECF No. 41",
+              "text": "\nSix months later, the parties filed a stipulated motion requesting that the Court extend the\n\n[p. 2] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nexpert disclosure deadlines and the discovery deadline by two months. (See Dkt. No. 34 at 1.)\nThe Court granted the parties’ stipulated motion but observed that the parties had not requested\nto extend the dispositive motions deadline, which would be before the parties’ new discovery\ndeadline. (See Dkt. No. 35.) Consistent with the Court’s Chambers Procedures, the Court warned\nthe parties that the Court would be inclined to move the trial date if the parties intended to move\nto extend the dispositive motions deadline. (See id.); see also Chambers Procedures,\nhttps://www.wawd.uscourts.gov/judges/coughenour-procedures (“Judge Coughenour will not\ndecrease the amount of time between the dispositive motion cutoff date and the trial date [below\n90 days] unless the parties set forth an extraordinary basis for doing so.”). Accordingly, the\nCourt directed the parties to file a joint status report setting forth the parties’ positions on\nwhether the Court should extend the dispositive motions deadline and, if so, what trial date\nwould be appropriate. (See Dkt. No. 35 at 2.)\nThe parties agree that the Court should extend the dispositive motions deadline but\ndisagree on when it should be and whether the Court should continue the trial. Plaintiff proposes\nthat the Court ignore its 90-day practice, extend the dispositive motions deadline to April 16,\n2021, and hold the trial as scheduled on June 1, 2021. (See Dkt. No. 40 at 3–4.) Defendants\nrequest that the Court continue the trial until November 15, 2021 because Columbia Roofing was\nnot added as a third-party defendant until May 2020, the parties need additional time to complete\ndiscovery in light of the impact of the COVID-19 pandemic, and most roofing occurs between\n"
+            },
+            {
+              "document": "ECF No. 41",
+              "text": "\nwould be appropriate. (See Dkt. No. 35 at 2.)\nThe parties agree that the Court should extend the dispositive motions deadline but\ndisagree on when it should be and whether the Court should continue the trial. Plaintiff proposes\nthat the Court ignore its 90-day practice, extend the dispositive motions deadline to April 16,\n2021, and hold the trial as scheduled on June 1, 2021. (See Dkt. No. 40 at 3–4.) Defendants\nrequest that the Court continue the trial until November 15, 2021 because Columbia Roofing was\nnot added as a third-party defendant until May 2020, the parties need additional time to complete\ndiscovery in light of the impact of the COVID-19 pandemic, and most roofing occurs between\nApril and October so holding the trial over the summer would “interfere with Columbia\nRoofing’s business.” (Dkt. No. 40 at 2.)\nHaving reviewed the parties’ briefing and the relevant record and finding good cause\nbased on the parties’ need to conduct additional discovery and the impact of the COVID-19\npandemic,1 the Court ORDERS as follows:\n1 The Court does not find good cause based on Columbia Roofing’s business interests.\n\n[p. 3] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\n"
+            },
+            {
+              "document": "ECF No. 41",
+              "text": "\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\nDATED this 14th day of January 2021.\nAJohn C. Coughenour\nUNITED STATES DISTRICT JUDGE\n"
+            }
+          ],
+          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\nThe Document orders that trial briefs are due by September 2, 2021 [^1].\n\nCovered: trial brief deadline\nNot covered: none",
+          "asked": [],
+          "searchAgain": false,
+          "inputTokens": 11291,
+          "outputTokens": 77,
+          "ms": 844.9699159999982
         }
       ],
       "misses": []
@@ -190,8 +237,8 @@
       "result": {
         "verdict": "supported",
         "evidence": {
-          "passageId": "f8553167-20f0-4740-8cae-aef7a3eb40d2",
-          "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+          "passageId": "90739668-6a82-4303-a97f-1eef6e792c03",
+          "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
           "documentName": "ECF No. 41",
           "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
           "pageFrom": 3,
@@ -205,14 +252,14 @@
           "check": "found",
           "checkReason": null
         },
-        "says": "该命令规定审理简报（trial briefs）应于 2021 年 9 月 2 日前提交。",
+        "says": "The order sets the trial briefs deadline as September 2, 2021, on page 3 of the order (the sentence's \"ECF No. 41 at 3\" matches this page). The Document says \"Trial briefs are due by September 2, 2021.\"",
         "unsupported": null,
         "calculation": null,
         "citedCaseUnchecked": false,
         "citedCaseFound": false,
         "versions": [
           {
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291"
           }
         ],
@@ -223,7 +270,7 @@
             "from": 28,
             "to": 43,
             "outcome": "supported",
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "documentName": "ECF No. 41",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
             "location": {
@@ -247,21 +294,21 @@
           "kind": "check",
           "queries": [],
           "handed": [],
-          "reply": "I'll search the documents for the briefing deadline.",
+          "reply": "I'll search the Documents for the briefing deadline order.",
           "asked": [
-            "briefing schedule September 2, 2021 order",
-            "ECF No. 41 briefing deadline"
+            "briefing schedule order September 2, 2021 ECF No. 41",
+            "simultaneous briefs due September 2, 2021"
           ],
           "searchAgain": false,
           "inputTokens": 5039,
-          "outputTokens": 137,
-          "ms": 1794.6942500000005
+          "outputTokens": 148,
+          "ms": 1173.6875419999997
         },
         {
           "kind": "check",
           "queries": [
-            "briefing schedule September 2, 2021 order",
-            "ECF No. 41 briefing deadline"
+            "briefing schedule order September 2, 2021 ECF No. 41",
+            "simultaneous briefs due September 2, 2021"
           ],
           "handed": [
             {
@@ -297,59 +344,12 @@
               "text": "\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\nDATED this 14th day of January 2021.\nAJohn C. Coughenour\nUNITED STATES DISTRICT JUDGE\n"
             }
           ],
-          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\n\nThe order sets the trial briefs deadline as September 2, 2021, and the sentence's \"briefing deadline\" matches that item. It appears on page 3 as \"Trial briefs are due by September 2, 2021.\"\n\nThe sentence cites \"ECF No. 41 at 3\", and the passage is on page 3 of that document.",
+          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\n\nThe order sets the trial briefs deadline as September 2, 2021, on page 3 of the order (the sentence's \"ECF No. 41 at 3\" matches this page). The Document says \"Trial briefs are due by September 2, 2021.\" [^1]\n\nCovered: 审理简报（trial briefs）期限为2021年9月2日\nNot covered: none\n\nCitation:",
           "asked": [],
           "searchAgain": false,
-          "inputTokens": 11112,
-          "outputTokens": 229,
-          "ms": 1910.6123329999973
-        },
-        {
-          "kind": "check",
-          "queries": [
-            "briefing schedule September 2, 2021 order",
-            "ECF No. 41 briefing deadline"
-          ],
-          "handed": [
-            {
-              "document": "ECF No. 41",
-              "text": "\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nTHE HONORABLE JOHN C. COUGHENOUR\nUNITED STATES DISTRICT COURT\nWESTERN DISTRICT OF WASHINGTON\nAT SEATTLE\nREGENCY APARTMENTS VANCOUVER\nLLC,\nPlaintiff,\nv.\nTHE SHERWIN-WILLIAMS COMPANY,\nDefendant.\nCASE NO. C20-5026-JCC\nORDER\nThis matter comes before the Court on Defendant The Sherwin-Williams Company and\nThird-Party Defendant Columbia Construction Service, Inc.’s motion to continue trial (Dkt. No.\n40). Having thoroughly considered the parties’ briefing and the relevant record, the Court finds\noral argument unnecessary and hereby GRANTS in part and DENIES in part the motion for the\nreasons explained herein.\nPlaintiff filed the complaint in this matter on January 13, 2020. (Dkt. No. 1.) On April 27,\n2020, Judge Leighton issued a scheduling order, which set trial for June 1, 2021, the dispositive\nmotions deadline for March 3, 2021, and the discovery deadline for February 1, 2021. (Dkt. No.\n14.) On May 5, 2020, Defendant The Sherwin-Williams Company filed a third-party complaint\nagainst third-party defendant Columbia Construction Service, Inc. (Dkt. No. 17.)\nSix months later, the parties filed a stipulated motion requesting that the Court extend the\n\n[p. 2] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nexpert disclosure deadlines and the discovery deadline by two months. (See Dkt. No. 34 at 1.)\nThe Court granted the parties’ stipulated motion but observed that the parties had not requested\nto extend the dispositive motions deadline, which would be before the parties’ new discovery\ndeadline. (See Dkt. No. 35.) Consistent with the Court’s Chambers Procedures, the Court warned\nthe parties that the Court would be inclined to move the trial date if the parties intended to move\nto extend the dispositive motions deadline. (See id.); see also Chambers Procedures,\n"
-            },
-            {
-              "document": "ECF No. 41",
-              "text": "\nSix months later, the parties filed a stipulated motion requesting that the Court extend the\n\n[p. 2] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nexpert disclosure deadlines and the discovery deadline by two months. (See Dkt. No. 34 at 1.)\nThe Court granted the parties’ stipulated motion but observed that the parties had not requested\nto extend the dispositive motions deadline, which would be before the parties’ new discovery\ndeadline. (See Dkt. No. 35.) Consistent with the Court’s Chambers Procedures, the Court warned\nthe parties that the Court would be inclined to move the trial date if the parties intended to move\nto extend the dispositive motions deadline. (See id.); see also Chambers Procedures,\nhttps://www.wawd.uscourts.gov/judges/coughenour-procedures (“Judge Coughenour will not\ndecrease the amount of time between the dispositive motion cutoff date and the trial date [below\n90 days] unless the parties set forth an extraordinary basis for doing so.”). Accordingly, the\nCourt directed the parties to file a joint status report setting forth the parties’ positions on\nwhether the Court should extend the dispositive motions deadline and, if so, what trial date\nwould be appropriate. (See Dkt. No. 35 at 2.)\nThe parties agree that the Court should extend the dispositive motions deadline but\ndisagree on when it should be and whether the Court should continue the trial. Plaintiff proposes\nthat the Court ignore its 90-day practice, extend the dispositive motions deadline to April 16,\n2021, and hold the trial as scheduled on June 1, 2021. (See Dkt. No. 40 at 3–4.) Defendants\nrequest that the Court continue the trial until November 15, 2021 because Columbia Roofing was\nnot added as a third-party defendant until May 2020, the parties need additional time to complete\ndiscovery in light of the impact of the COVID-19 pandemic, and most roofing occurs between\n"
-            },
-            {
-              "document": "ECF No. 41",
-              "text": "\nwould be appropriate. (See Dkt. No. 35 at 2.)\nThe parties agree that the Court should extend the dispositive motions deadline but\ndisagree on when it should be and whether the Court should continue the trial. Plaintiff proposes\nthat the Court ignore its 90-day practice, extend the dispositive motions deadline to April 16,\n2021, and hold the trial as scheduled on June 1, 2021. (See Dkt. No. 40 at 3–4.) Defendants\nrequest that the Court continue the trial until November 15, 2021 because Columbia Roofing was\nnot added as a third-party defendant until May 2020, the parties need additional time to complete\ndiscovery in light of the impact of the COVID-19 pandemic, and most roofing occurs between\nApril and October so holding the trial over the summer would “interfere with Columbia\nRoofing’s business.” (Dkt. No. 40 at 2.)\nHaving reviewed the parties’ briefing and the relevant record and finding good cause\nbased on the parties’ need to conduct additional discovery and the impact of the COVID-19\npandemic,1 the Court ORDERS as follows:\n1 The Court does not find good cause based on Columbia Roofing’s business interests.\n\n[p. 3] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\n"
-            },
-            {
-              "document": "ECF No. 41",
-              "text": "\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\nDATED this 14th day of January 2021.\nAJohn C. Coughenour\nUNITED STATES DISTRICT JUDGE\n"
-            },
-            {
-              "document": "ECF No. 41",
-              "text": "\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nTHE HONORABLE JOHN C. COUGHENOUR\nUNITED STATES DISTRICT COURT\nWESTERN DISTRICT OF WASHINGTON\nAT SEATTLE\nREGENCY APARTMENTS VANCOUVER\nLLC,\nPlaintiff,\nv.\nTHE SHERWIN-WILLIAMS COMPANY,\nDefendant.\nCASE NO. C20-5026-JCC\nORDER\nThis matter comes before the Court on Defendant The Sherwin-Williams Company and\nThird-Party Defendant Columbia Construction Service, Inc.’s motion to continue trial (Dkt. No.\n40). Having thoroughly considered the parties’ briefing and the relevant record, the Court finds\noral argument unnecessary and hereby GRANTS in part and DENIES in part the motion for the\nreasons explained herein.\nPlaintiff filed the complaint in this matter on January 13, 2020. (Dkt. No. 1.) On April 27,\n2020, Judge Leighton issued a scheduling order, which set trial for June 1, 2021, the dispositive\nmotions deadline for March 3, 2021, and the discovery deadline for February 1, 2021. (Dkt. No.\n14.) On May 5, 2020, Defendant The Sherwin-Williams Company filed a third-party complaint\nagainst third-party defendant Columbia Construction Service, Inc. (Dkt. No. 17.)\nSix months later, the parties filed a stipulated motion requesting that the Court extend the\n\n[p. 2] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nexpert disclosure deadlines and the discovery deadline by two months. (See Dkt. No. 34 at 1.)\nThe Court granted the parties’ stipulated motion but observed that the parties had not requested\nto extend the dispositive motions deadline, which would be before the parties’ new discovery\ndeadline. (See Dkt. No. 35.) Consistent with the Court’s Chambers Procedures, the Court warned\nthe parties that the Court would be inclined to move the trial date if the parties intended to move\nto extend the dispositive motions deadline. (See id.); see also Chambers Procedures,\n"
-            },
-            {
-              "document": "ECF No. 41",
-              "text": "\nSix months later, the parties filed a stipulated motion requesting that the Court extend the\n\n[p. 2] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\nexpert disclosure deadlines and the discovery deadline by two months. (See Dkt. No. 34 at 1.)\nThe Court granted the parties’ stipulated motion but observed that the parties had not requested\nto extend the dispositive motions deadline, which would be before the parties’ new discovery\ndeadline. (See Dkt. No. 35.) Consistent with the Court’s Chambers Procedures, the Court warned\nthe parties that the Court would be inclined to move the trial date if the parties intended to move\nto extend the dispositive motions deadline. (See id.); see also Chambers Procedures,\nhttps://www.wawd.uscourts.gov/judges/coughenour-procedures (“Judge Coughenour will not\ndecrease the amount of time between the dispositive motion cutoff date and the trial date [below\n90 days] unless the parties set forth an extraordinary basis for doing so.”). Accordingly, the\nCourt directed the parties to file a joint status report setting forth the parties’ positions on\nwhether the Court should extend the dispositive motions deadline and, if so, what trial date\nwould be appropriate. (See Dkt. No. 35 at 2.)\nThe parties agree that the Court should extend the dispositive motions deadline but\ndisagree on when it should be and whether the Court should continue the trial. Plaintiff proposes\nthat the Court ignore its 90-day practice, extend the dispositive motions deadline to April 16,\n2021, and hold the trial as scheduled on June 1, 2021. (See Dkt. No. 40 at 3–4.) Defendants\nrequest that the Court continue the trial until November 15, 2021 because Columbia Roofing was\nnot added as a third-party defendant until May 2020, the parties need additional time to complete\ndiscovery in light of the impact of the COVID-19 pandemic, and most roofing occurs between\n"
-            },
-            {
-              "document": "ECF No. 41",
-              "text": "\nwould be appropriate. (See Dkt. No. 35 at 2.)\nThe parties agree that the Court should extend the dispositive motions deadline but\ndisagree on when it should be and whether the Court should continue the trial. Plaintiff proposes\nthat the Court ignore its 90-day practice, extend the dispositive motions deadline to April 16,\n2021, and hold the trial as scheduled on June 1, 2021. (See Dkt. No. 40 at 3–4.) Defendants\nrequest that the Court continue the trial until November 15, 2021 because Columbia Roofing was\nnot added as a third-party defendant until May 2020, the parties need additional time to complete\ndiscovery in light of the impact of the COVID-19 pandemic, and most roofing occurs between\nApril and October so holding the trial over the summer would “interfere with Columbia\nRoofing’s business.” (Dkt. No. 40 at 2.)\nHaving reviewed the parties’ briefing and the relevant record and finding good cause\nbased on the parties’ need to conduct additional discovery and the impact of the COVID-19\npandemic,1 the Court ORDERS as follows:\n1 The Court does not find good cause based on Columbia Roofing’s business interests.\n\n[p. 3] 2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\n"
-            },
-            {
-              "document": "ECF No. 41",
-              "text": "\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\nDATED this 14th day of January 2021.\nAJohn C. Coughenour\nUNITED STATES DISTRICT JUDGE\n"
-            }
-          ],
-          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\n\n该命令规定审理简报（trial briefs）应于 2021 年 9 月 2 日前提交。[^1]\n\nCovered: 审理简报的截止日期",
-          "asked": [],
-          "searchAgain": false,
-          "inputTokens": 11377,
-          "outputTokens": 86,
-          "ms": 1120.412209000002
+          "inputTokens": 11123,
+          "outputTokens": 246,
+          "ms": 1603.549291000003
         }
       ],
       "misses": []
@@ -382,8 +382,8 @@
       "result": {
         "verdict": "contradicted",
         "evidence": {
-          "passageId": "f8553167-20f0-4740-8cae-aef7a3eb40d2",
-          "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+          "passageId": "90739668-6a82-4303-a97f-1eef6e792c03",
+          "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
           "documentName": "ECF No. 41",
           "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
           "pageFrom": 3,
@@ -397,14 +397,14 @@
           "check": "found",
           "checkReason": null
         },
-        "says": "The Document orders that the June 1, 2021 bench trial is continued until September 6, 2021, as the sentence says, but it sets the trial briefs due date as September 2, 2021, not October 2, 2021.",
+        "says": "The Order continues the June 1, 2021 bench trial to September 6, 2021, as the sentence says, but sets the trial briefs deadline at September 2, 2021, not October 2, 2021.",
         "unsupported": null,
         "calculation": null,
         "citedCaseUnchecked": false,
         "citedCaseFound": false,
         "versions": [
           {
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291"
           }
         ],
@@ -415,7 +415,7 @@
             "from": 109,
             "to": 124,
             "outcome": "partly",
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "documentName": "ECF No. 41",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
             "location": {
@@ -431,7 +431,7 @@
             "pageTo": 3,
             "passage": "2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\nDATED this 14th day of January 2021.\nAJohn C. Coughenour\nUNITED STATES DISTRICT JUDGE",
             "covered": "the bench trial continuance to September 6, 2021",
-            "uncovered": "the trial brief due date of October 2, 2021"
+            "uncovered": "the trial briefs deadline (quoted passage says September 2, 2021, not October 2)"
           }
         ]
       },
@@ -441,21 +441,21 @@
           "kind": "check",
           "queries": [],
           "handed": [],
-          "reply": "I'll search the Documents for the trial continuance and the trial brief deadline.",
+          "reply": "I'll search the Documents for the trial continuance and brief deadlines.",
           "asked": [
             "bench trial continued until September 6, 2021; trial briefs due October 2, 2021",
-            "June 1, 2021 bench trial continued"
+            "June 1, 2021 bench trial continuance"
           ],
           "searchAgain": false,
           "inputTokens": 5026,
-          "outputTokens": 159,
-          "ms": 1244.133541999996
+          "outputTokens": 158,
+          "ms": 1196.8347919999942
         },
         {
           "kind": "check",
           "queries": [
             "bench trial continued until September 6, 2021; trial briefs due October 2, 2021",
-            "June 1, 2021 bench trial continued"
+            "June 1, 2021 bench trial continuance"
           ],
           "handed": [
             {
@@ -491,12 +491,23 @@
               "text": "\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\nDATED this 14th day of January 2021.\nAJohn C. Coughenour\nUNITED STATES DISTRICT JUDGE\n"
             }
           ],
-          "reply": "Verdict: contradicted\nScope: none, same\nTopic: found\nRoles: none, same\nThe Document orders that the June 1, 2021 bench trial is continued until September 6, 2021, as the sentence says, but it sets the trial briefs due date as September 2, 2021, not October 2, 2021. [^1]\n\nCovered: the trial continuance to September 6, 2021\nNot covered: none\n\nCite:",
+          "reply": "Verdict: contradicted\nScope: none, same\nTopic: found\nRoles: none, same\nThe Order continues the June 1, 2021 bench trial to September 6, 2021, as the sentence says, but sets the trial briefs deadline at September 2, 2021, not October 2, 2021 [^1].\nCovered: the trial continuance to September 6, 2021\n\n[^1]: ECF No. 41, p. 3: \"Trial briefs are due by September 2, 2021.\"",
           "asked": [],
           "searchAgain": false,
-          "inputTokens": 11121,
-          "outputTokens": 234,
-          "ms": 1497.757083000004
+          "inputTokens": 11120,
+          "outputTokens": 158,
+          "ms": 2131.6664579999997
+        },
+        {
+          "kind": "evidence",
+          "queries": [],
+          "handed": [],
+          "reply": "{\"passage\": \"P3\", \"location\": \"[p. 3] paragraph 2 of the ORDER section (numbered list)\", \"quote\": \"2. Trial briefs are due by September 2, 2021.\"}",
+          "asked": [],
+          "searchAgain": false,
+          "inputTokens": 3064,
+          "outputTokens": 67,
+          "ms": 1895.9860830000034
         },
         {
           "kind": "confirm",
@@ -507,18 +518,18 @@
           "searchAgain": false,
           "inputTokens": 1039,
           "outputTokens": 5,
-          "ms": 1115.9711249999964
+          "ms": 990.8017089999994
         },
         {
           "kind": "strict",
           "queries": [],
           "handed": [],
-          "reply": "Sentence: trial briefs due October 2, 2021 (ECF No. 41 at 3)\nQuote: trial briefs due by September 2, 2021\nJudgement: conflict",
+          "reply": "Sentence: trial briefs are due October 2, 2021 (ECF No. 41 at 3)\nQuote: trial briefs are due by September 2, 2021\nJudgement: conflict",
           "asked": [],
           "searchAgain": false,
           "inputTokens": 1165,
-          "outputTokens": 62,
-          "ms": 849.992459000001
+          "outputTokens": 64,
+          "ms": 980.2207500000004
         }
       ],
       "misses": []
@@ -562,8 +573,8 @@
       "result": {
         "verdict": "supported",
         "evidence": {
-          "passageId": "f8553167-20f0-4740-8cae-aef7a3eb40d2",
-          "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+          "passageId": "90739668-6a82-4303-a97f-1eef6e792c03",
+          "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
           "documentName": "ECF No. 41",
           "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
           "pageFrom": 3,
@@ -577,14 +588,14 @@
           "check": "found",
           "checkReason": null
         },
-        "says": "The Order states that \"The dispositive motions deadline is CONTINUED until June 8, 2021.\"",
+        "says": "The Document says the dispositive motions deadline is continued until June 8, 2021, though this appears on page 3 of the order rather than page 2 as the sentence cites.",
         "unsupported": null,
         "calculation": null,
         "citedCaseUnchecked": false,
         "citedCaseFound": false,
         "versions": [
           {
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291"
           }
         ],
@@ -595,7 +606,7 @@
             "from": 66,
             "to": 78,
             "outcome": "not-found",
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "documentName": "ECF No. 41",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
             "location": {
@@ -635,19 +646,19 @@
           "handed": [],
           "reply": "I'll search the Documents for the dispositive motions deadline.",
           "asked": [
-            "dispositive motions deadline continued until June 8, 2021",
-            "dispositive motions deadline extended order Dkt. 41"
+            "dispositive motions deadline continued June 8, 2021",
+            "dispositive motions deadline"
           ],
           "searchAgain": false,
           "inputTokens": 5007,
-          "outputTokens": 150,
-          "ms": 1616.67008299999
+          "outputTokens": 139,
+          "ms": 1356.1323340000017
         },
         {
           "kind": "check",
           "queries": [
-            "dispositive motions deadline continued until June 8, 2021",
-            "dispositive motions deadline extended order Dkt. 41"
+            "dispositive motions deadline continued June 8, 2021",
+            "dispositive motions deadline"
           ],
           "handed": [
             {
@@ -683,12 +694,12 @@
               "text": "\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\nDATED this 14th day of January 2021.\nAJohn C. Coughenour\nUNITED STATES DISTRICT JUDGE\n"
             }
           ],
-          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\nThe Order states that \"The dispositive motions deadline is CONTINUED until June 8, 2021.\" [^1]\nCovered: the dispositive motions deadline continued to June 8, 2021",
+          "reply": "The order states \"The dispositive motions deadline is CONTINUED until June 8, 2021\" on page 3, not page 2 as the sentence cites. The date and the continuance match; the page citation differs slightly. The sentence's claim is supported.\n\nVerdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\nThe Document says the dispositive motions deadline is continued until June 8, 2021 [^1], though this appears on page 3 of the order rather than page 2 as the sentence cites.\nCovered: the dispositive motions deadline continued to June 8, 2021\nNot covered: the page 2 citation",
           "asked": [],
           "searchAgain": false,
-          "inputTokens": 11093,
-          "outputTokens": 197,
-          "ms": 2740.8425419999985
+          "inputTokens": 11082,
+          "outputTokens": 310,
+          "ms": 2141.7223749999976
         }
       ],
       "misses": []
@@ -747,8 +758,8 @@
       "result": {
         "verdict": "supported",
         "evidence": {
-          "passageId": "f8553167-20f0-4740-8cae-aef7a3eb40d2",
-          "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+          "passageId": "90739668-6a82-4303-a97f-1eef6e792c03",
+          "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
           "documentName": "ECF No. 41",
           "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
           "pageFrom": 3,
@@ -762,14 +773,14 @@
           "check": "found",
           "checkReason": null
         },
-        "says": "The Order states that \"The dispositive motions deadline is CONTINUED until June 8, 2021.\"",
+        "says": "The Order states that the dispositive motions deadline is continued until June 8, 2021.",
         "unsupported": null,
         "calculation": null,
         "citedCaseUnchecked": false,
         "citedCaseFound": false,
         "versions": [
           {
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291"
           }
         ],
@@ -780,7 +791,7 @@
             "from": 66,
             "to": 81,
             "outcome": "supported",
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "documentName": "ECF No. 41",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
             "location": {
@@ -801,7 +812,7 @@
             "from": 83,
             "to": 91,
             "outcome": "not-found",
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "documentName": "ECF No. 41",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
             "location": {
@@ -841,18 +852,18 @@
           "handed": [],
           "reply": "I'll search the Documents for the dispositive motions deadline.",
           "asked": [
-            "dispositive motions deadline continued June 8, 2021",
+            "dispositive motions deadline continued until June 8, 2021",
             "dispositive motions deadline extended"
           ],
           "searchAgain": false,
           "inputTokens": 5014,
-          "outputTokens": 141,
-          "ms": 1158.4522920000018
+          "outputTokens": 142,
+          "ms": 1012.6989170000015
         },
         {
           "kind": "check",
           "queries": [
-            "dispositive motions deadline continued June 8, 2021",
+            "dispositive motions deadline continued until June 8, 2021",
             "dispositive motions deadline extended"
           ],
           "handed": [
@@ -889,12 +900,12 @@
               "text": "\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\nDATED this 14th day of January 2021.\nAJohn C. Coughenour\nUNITED STATES DISTRICT JUDGE\n"
             }
           ],
-          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\nThe Order states that \"The dispositive motions deadline is CONTINUED until June 8, 2021.\" [^1]\nCovered: the dispositive motions deadline continued to June 8, 2021",
+          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\nThe Order states that the dispositive motions deadline is continued until June 8, 2021. [^1]\n\nCovered: the dispositive motions deadline extension to June 8, 2021\nNot covered: the citation's pin cites (ECF No. 41 at 3; Id. at 2), which the Order's page 3 supports for the date",
           "asked": [],
           "searchAgain": false,
-          "inputTokens": 11091,
-          "outputTokens": 216,
-          "ms": 2794.656999999992
+          "inputTokens": 11092,
+          "outputTokens": 240,
+          "ms": 1799.457417000005
         }
       ],
       "misses": []
@@ -941,8 +952,8 @@
       "result": {
         "verdict": "supported",
         "evidence": {
-          "passageId": "f8553167-20f0-4740-8cae-aef7a3eb40d2",
-          "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+          "passageId": "90739668-6a82-4303-a97f-1eef6e792c03",
+          "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
           "documentName": "ECF No. 41",
           "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
           "pageFrom": 3,
@@ -956,14 +967,14 @@
           "check": "found",
           "checkReason": null
         },
-        "says": "The Document states that trial briefs are due by September 2, 2021, in the Court's order on page 3.",
+        "says": "The Order states that \"Trial briefs are due by September 2, 2021,\" on page 3 of ECF No. 41.",
         "unsupported": null,
         "calculation": null,
         "citedCaseUnchecked": false,
         "citedCaseFound": false,
         "versions": [
           {
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291"
           }
         ],
@@ -974,7 +985,7 @@
             "from": 43,
             "to": 58,
             "outcome": "supported",
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "documentName": "ECF No. 41",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
             "location": {
@@ -995,7 +1006,7 @@
             "from": 60,
             "to": 65,
             "outcome": "supported",
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "documentName": "ECF No. 41",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
             "location": {
@@ -1027,7 +1038,7 @@
           "searchAgain": false,
           "inputTokens": 5005,
           "outputTokens": 137,
-          "ms": 1301.31700000001
+          "ms": 1490.081290999995
         },
         {
           "kind": "check",
@@ -1069,12 +1080,12 @@
               "text": "\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n1. The June 1, 2021 bench trial is CONTINUED until September 6, 2021 at 9:30 a.m.\n2. Trial briefs are due by September 2, 2021.\n3. The proposed pretrial order is due by August 27, 2021.\n4. The dispositive motions deadline is CONTINUED until June 8, 2021.\n5. Mediation pursuant to Local Civil Rule 39.1 must be completed by May 23, 2021.\n6. The discovery deadline is CONTINUED until May 7, 2021.\na. Plaintiff’s expert disclosure deadline is CONTINUED until February 12, 2021.\nb. Defendants’ expert disclosure deadline is CONTINUED until March 12, 2021.\nc. The rebuttal expert disclosure deadline is CONTINUED until April 9, 2021.\nd. Discovery motions must be filed in accordance with Local Civil Rule 16(b)(3).\nDATED this 14th day of January 2021.\nAJohn C. Coughenour\nUNITED STATES DISTRICT JUDGE\n"
             }
           ],
-          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\nThe Document states that trial briefs are due by September 2, 2021, in the Court's order on page 3. [^1]\nCovered: the trial brief deadline",
+          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\n\nThe Order states that \"Trial briefs are due by September 2, 2021,\" on page 3 of ECF No. 41 [^1].\n\nCovered: the trial brief deadline of September 2, 2021",
           "asked": [],
           "searchAgain": false,
           "inputTokens": 11078,
-          "outputTokens": 176,
-          "ms": 1607.8875409999891
+          "outputTokens": 189,
+          "ms": 1522.7906670000011
         }
       ],
       "misses": []
@@ -1099,8 +1110,8 @@
       "result": {
         "verdict": "supported",
         "evidence": {
-          "passageId": "f8553167-20f0-4740-8cae-aef7a3eb40d2",
-          "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+          "passageId": "90739668-6a82-4303-a97f-1eef6e792c03",
+          "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
           "documentName": "ECF No. 41",
           "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
           "pageFrom": 3,
@@ -1114,18 +1125,18 @@
           "check": "found",
           "checkReason": null
         },
-        "says": "The ECF No. 41 order states \"Trial briefs are due by September 2, 2021.\" The sentence's pin cite to page 3 matches the page where this paragraph appears.",
+        "says": "The ECF No. 41 order states \"Trial briefs are due by September 2, 2021.\" The sentence's page cite (at 3) matches the page where this paragraph appears.",
         "unsupported": null,
         "calculation": null,
         "citedCaseUnchecked": false,
         "citedCaseFound": false,
         "versions": [
           {
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291"
           },
           {
-            "documentId": "0ca72590-a1ec-4198-94a1-d581e12a6fcc",
+            "documentId": "37b12324-ca7a-42ee-b5c5-b14a1d5de800",
             "contentHash": "4039b87c6463fa51306f4fac5fd856e60898545d083c9d29fe07bf0ac511602a"
           }
         ],
@@ -1138,11 +1149,11 @@
             "outcome": "choose",
             "candidates": [
               {
-                "id": "0ca72590-a1ec-4198-94a1-d581e12a6fcc",
+                "id": "37b12324-ca7a-42ee-b5c5-b14a1d5de800",
                 "name": "ECF No. 41 Robinson"
               },
               {
-                "id": "37e85320-f075-461b-a775-c23df5cd31df",
+                "id": "a208779a-2020-4b49-b0f0-b2f05944a987",
                 "name": "ECF No. 41"
               }
             ]
@@ -1163,7 +1174,7 @@
           "searchAgain": false,
           "inputTokens": 5002,
           "outputTokens": 137,
-          "ms": 1031.2852500000008
+          "ms": 1027.7579169999954
         },
         {
           "kind": "check",
@@ -1237,12 +1248,12 @@
               "text": "\nasserts, and they are due to be dismissed.\nConclusion\nThe City’s motion to dismiss, (doc. 32), is GRANTED IN PART to the extent that\nRobinson’s claims against it in Counts I, III, V, and VI, as well as any negligent supervision and\ntraining claim in Count IV, are DISMISSED WITH PREJUDICE. It is DENIED to the extent\nthat Robinson’s claims against it in Counts II and IV (except to the extent dismissed above)\nproceed. Roper’s motion to dismiss, (doc. 37), is GRANTED, and Robinson’s claims against\nRoper are DISMISSED WITH PREJUDICE.\n\n[p. 20] The parties are ORDERED to hold a conference pursuant to Fed. R. Civ. P. 26(f) and to\nfile a report pursuant to Fed. R. Civ. P 26(f)(2) and L.R. 26.1(d) no later than April 19, 2022.\nDONE this 5th day of April, 2022.\n_______________________________\nJOHN H. ENGLAND, III\nUNITED STATES MAGISTRATE JUDGE\n"
             }
           ],
-          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\n\nThe ECF No. 41 order states \"Trial briefs are due by September 2, 2021.\" [^1] The sentence's pin cite to page 3 matches the page where this paragraph appears.",
+          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\n\nThe ECF No. 41 order states \"Trial briefs are due by September 2, 2021.\" [^1] The sentence's page cite (at 3) matches the page where this paragraph appears.",
           "asked": [],
           "searchAgain": false,
           "inputTokens": 17483,
-          "outputTokens": 187,
-          "ms": 1451.7033340000053
+          "outputTokens": 186,
+          "ms": 1393.3977920000034
         }
       ],
       "misses": []
@@ -1263,8 +1274,8 @@
       "result": {
         "verdict": "supported",
         "evidence": {
-          "passageId": "f8553167-20f0-4740-8cae-aef7a3eb40d2",
-          "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+          "passageId": "90739668-6a82-4303-a97f-1eef6e792c03",
+          "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
           "documentName": "ECF No. 41",
           "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291",
           "pageFrom": 3,
@@ -1278,18 +1289,18 @@
           "check": "found",
           "checkReason": null
         },
-        "says": "The order in ECF No. 41 states \"Trial briefs are due by September 2, 2021.\"",
+        "says": "The order in ECF No. 41 says \"Trial briefs are due by September 2, 2021.\"",
         "unsupported": null,
         "calculation": null,
         "citedCaseUnchecked": false,
         "citedCaseFound": false,
         "versions": [
           {
-            "documentId": "37e85320-f075-461b-a775-c23df5cd31df",
+            "documentId": "a208779a-2020-4b49-b0f0-b2f05944a987",
             "contentHash": "379d7ad1b20bd39b8128ba416621c62f757a3a375d79bc745bda767d1b846291"
           },
           {
-            "documentId": "0ca72590-a1ec-4198-94a1-d581e12a6fcc",
+            "documentId": "37b12324-ca7a-42ee-b5c5-b14a1d5de800",
             "contentHash": "4039b87c6463fa51306f4fac5fd856e60898545d083c9d29fe07bf0ac511602a"
           }
         ],
@@ -1317,7 +1328,7 @@
           "searchAgain": false,
           "inputTokens": 5002,
           "outputTokens": 137,
-          "ms": 1654.8840000000055
+          "ms": 1605.0059169999877
         },
         {
           "kind": "check",
@@ -1391,12 +1402,12 @@
               "text": "\nneither case involved officers conducting a traffic stop. Robinson does not explain how a policy\napplicable to traffic stops like the one in his case would apply to the factual scenarios in Buttram\nor Underwood, or alternatively how a policy that led to the alleged constitutional deprivations in\nthose cases applies to a traffic stop. See Peterson v. City of Fort Worth, 588 F.3d 838, 851 (5th\nCir. 2009) (cleaned up) (“A pattern requires similarity and specificity; prior indications cannot\nsimply be for any and all ‘bad’ or unwise acts, but rather must point to the specific violation in\nquestion.”)\n5 Neither Underwood’s case nor Buttram’s case actually resulted in a finding that excessive\nforce had occurred. As the City points out, the undersigned granted summary judgment to the\ndefendants in Underwood v. City of Bessemer, Case No. 2:15-CV-01585-JHE, 2019 WL 4392523\n(N.D. Ala. Sept. 12, 2019). On appeal, the Eleventh Circuit found that factual issues precluded\nfinding that there was no Fourth Amendment violation, but that the officers were nevertheless\nentitled to summary judgment on the issue of qualified immunity. Underwood v. City of Bessemer,\n11 F.4th 1317 (11th Cir. 2021). Thus, it affirmed. In the other case, Buttram v. City of Bessemer,\net al., Case No. 2:17-00846-ACA (N.D. Ala.), the parties reached a settlement through mediation\nand stipulated to the case’s dismissal.\n\n[p. 12] Robinson attempts to get around this by pointing to Owens v. City of Fort Lauderdale, 174\nF. Supp. 2d 1298 (S.D. Fla. 2001), which he argues stands for the proposition that Monell liability\ncan be demonstrated by showing “that there has been a deliberate indifference by continued\nadherence to an approach that [policymakers] know or should know has failed to prevent tortuous\nconduct by inadequately trained employees.” (Doc. 35 at 4). In part, Owens involved allegations\nthat a municipality violated the plaintiffs’ decedent’s constitutional rights by failing to train\n"
             }
           ],
-          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\nThe order in ECF No. 41 states \"Trial briefs are due by September 2, 2021.\" [^1]\nCovered: the trial brief deadline of September 2, 2021\n\nCitation record:",
+          "reply": "Verdict: supported\nScope: none, same\nTopic: found\nRoles: none, same\nThe order in ECF No. 41 says \"Trial briefs are due by September 2, 2021.\" [^1]\nCovered: the trial brief deadline of September 2, 2021\n\nCitation 1 (ECF No. 41, p. 3, \"2. Trial briefs are due by September 2, 2021.\") supports the sentence's date and subject. The sentence's pin cite \"ECF No. 42 at 3\" does not match this document, which is ECF No. 41, so the citation reference itself is not confirmed.",
           "asked": [],
           "searchAgain": false,
           "inputTokens": 17980,
-          "outputTokens": 188,
-          "ms": 2220.137750000009
+          "outputTokens": 289,
+          "ms": 2265.932541000002
         }
       ],
       "misses": []

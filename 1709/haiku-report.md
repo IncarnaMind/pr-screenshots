@@ -1,10 +1,10 @@
 # Public record-cite evaluation (#1709)
 
-Run 2026-10-28T00:32:09.441Z at b2fb95db1, 106 s, with anthropic/claude-haiku-5-5. the app's public core checkClaim, with record-cite resolution and judgement.
+Run 2026-10-28T00:58:46.337Z at 5862dad34, 69 s, with anthropic/claude-haiku-5-5. the app's public core checkClaim, with record-cite resolution and judgement.
 
 Set: 2 public court Documents, 8 claims, 10 expected cite results. Matched 10 of 10.
 
-Model: 19 requests, 155711 input and 2911 output tokens, 29.9 s of requests, $0.0128 at the core's count.
+Model: 20 requests, 158690 input and 3146 output tokens, 28.7 s of requests, $0.0096 at the core's count.
 
 ## Cases
 
